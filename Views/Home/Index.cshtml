@@ -1,0 +1,14 @@
+﻿@model List<Dish>
+<div class = 'pageHeader'>  
+    <h1>Welcome to CRUDelicious!</h1>
+</div>
+<a href = '/new'>Add a new dish!</a>
+<p>Check out some recent dishes!</p>
+@{
+    foreach(Dish dish in Model) {
+        <div>
+            <a href = '/@dish.DishId'>@dish.Name</a>
+            <p style = 'display: inline-block'>by @dish.Chef</p>
+        </div>
+    }
+}
